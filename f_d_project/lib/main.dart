@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:f_d_project/page/root_page.dart';
+import 'package:f_d_project/theme/f_d_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -18,9 +19,11 @@ void main() {
     );
     SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
   }
-  runApp(MultiProvider(providers: <ChangeNotifierProvider<dynamic>>[
-
-  ]));
+  runApp(
+    MultiProvider(providers: <ChangeNotifierProvider<dynamic>>[
+      ChangeNotifierProvider<FDTheme>(create: (_) => FDTheme()),
+    ], child: MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {
