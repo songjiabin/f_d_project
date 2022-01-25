@@ -1,3 +1,4 @@
+import 'package:f_d_project/page/context_page.dart';
 import 'package:f_d_project/r.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -21,21 +22,15 @@ class _RootPageState extends State<RootPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('appBar'),
+        title: const Text('appBar111111'),
       ),
-      body: Container(
-        child: FutureBuilder(
-            future: rootBundle.loadString(R.assets1),
-            builder: (BuildContext context, AsyncSnapshot snapshot) {
-              if (snapshot.hasData) {
-                return Markdown(data: snapshot.data);
-              } else {
-                return Center(
-                  child: Text('loading...'),
-                );
-              }
-            }),
+      body: ListView(
+        children: <Widget>[
+          ContextPage(),
+        ],
       ),
     );
   }
+
+
 }

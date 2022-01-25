@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:f_d_project/page/root_page.dart';
+import 'package:f_d_project/page/stf_page.dart';
 import 'package:f_d_project/theme/f_d_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -27,7 +28,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const RootPage(),
+      home: RootPage(),
     );
   }
 }

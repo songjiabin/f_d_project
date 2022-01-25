@@ -49,7 +49,7 @@ flutter:
   assets:
   # assets-generator-begin
   # assets/*
-    - assets/1.md
+    - assets/immutable.md
   # assets-generator-end
 
 

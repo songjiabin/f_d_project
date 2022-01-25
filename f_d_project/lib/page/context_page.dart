@@ -10,6 +10,10 @@ class ContextPage extends StatefulWidget {
 class _ContextPageState extends State<ContextPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    final Scaffold? scaffold = context.findAncestorWidgetOfExactType<Scaffold>();
+    if (scaffold != null) {
+      return (scaffold.appBar as AppBar).title ?? const Text('appbar');
+    }
+    return const Text('appBar');
   }
 }
