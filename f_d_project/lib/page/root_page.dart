@@ -1,4 +1,5 @@
 import 'package:f_d_project/page/context_page.dart';
+import 'package:f_d_project/page/life_cycle_page.dart';
 import 'package:f_d_project/r.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -25,12 +26,13 @@ class _RootPageState extends State<RootPage> {
         title: const Text('appBar111111'),
       ),
       body: ListView(
-        children: <Widget>[
+        children: const <Widget>[
           ContextPage(),
+          LifeCyclePage(
+            initValue: 0,
+          ),
         ],
       ),
     );
   }
-
-
 }

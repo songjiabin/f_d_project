@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:f_d_project/page/life_cycle_page.dart';
 import 'package:f_d_project/page/root_page.dart';
 import 'package:f_d_project/page/stf_page.dart';
 import 'package:f_d_project/theme/f_d_theme.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RootPage(),
+      home: LifeCyclePage(),
     );
   }
 }
