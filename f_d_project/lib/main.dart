@@ -37,6 +37,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: LifeCyclePage(),
+      // home: Center(child: Text('test')),
     );
   }
 }
